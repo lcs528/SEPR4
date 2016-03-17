@@ -12,6 +12,7 @@ TagManager:
   - Statics
   - Weapon
   - pointsText
+  - CheatBox
   layers:
   - Default
   - TransparentFX

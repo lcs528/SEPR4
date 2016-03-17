@@ -548,6 +548,12 @@ Prefab:
     - {fileID: 21272878, guid: 00ef22a002caf4ac79d9dfc44de9938f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 00ef22a002caf4ac79d9dfc44de9938f, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &563397926 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11452652, guid: 2bf5c297f66f9eb47a408fdeff7d7f18,
+    type: 2}
+  m_PrefabInternal: {fileID: 313005135}
+  m_Script: {fileID: 575553740, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!4 &753841204 stripped
 Transform:
   m_PrefabParentObject: {fileID: 488916, guid: a394ed00fc243425fa42dde7bcd16832, type: 2}
@@ -2558,7 +2564,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1743975028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2705,3 +2711,52 @@ Transform:
   - {fileID: 310771501}
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!1 &2125107317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2125107319}
+  - 114: {fileID: 2125107318}
+  m_Layer: 0
+  m_Name: CheatHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2125107318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2125107317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b9f8bfb44031964393ffbc2a22111d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infinitehealth: 0
+  boostspeed: 0
+  pluspoints: 0
+  minuspoints: 0
+  ghealthcode: 00000000
+  gboostcode: 00000000
+  gpluscode: 00000000
+  gminuscode: 00000000
+  cheatMenuOpen: 0
+  cheatIn: {fileID: 563397926}
+--- !u!4 &2125107319
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2125107317}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 24.1779, y: -27.121334, z: 36.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11

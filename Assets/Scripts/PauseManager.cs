@@ -20,7 +20,7 @@ public class PauseManager : MonoBehaviour
 		Debug.Log ("Pause");
 
 
-		Time.timeScale = 0.00001f;
+		Time.timeScale = 0.0000f;
 
 		Paused = true;
 
@@ -28,6 +28,7 @@ public class PauseManager : MonoBehaviour
 		{
 			OnPaused();
 		}
+		Cheats.instance.cheatMenuOpen = true;
 	}
 
 	public static void Resume()
@@ -43,6 +44,7 @@ public class PauseManager : MonoBehaviour
 		{
 			OnResumed();
 		}
+		Cheats.instance.cheatMenuOpen = false;
 	}
 
 
