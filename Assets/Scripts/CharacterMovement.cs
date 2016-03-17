@@ -161,6 +161,10 @@ public class CharacterMovement : MonoBehaviour
 
 			Vector2 updateDirection = _inputAxes * speed * speedModifier * 0.01f;
 
+			if (Cheats.instance.boostspeed == true) {
+				updateDirection *= 2.0f;
+			}
+
 			if (currentlySlowed) {
 				updateDirection *= slowPercentage;
 			}

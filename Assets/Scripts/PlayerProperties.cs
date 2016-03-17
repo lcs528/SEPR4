@@ -208,11 +208,16 @@ public class PlayerProperties : MonoBehaviour {
 	public void TakeDamage(float amount)
 	{
 		//MakeDamageText (-amount);
-		_health -= amount;
-		if (_health <= 0) {
-			Dead ();
+		if (Cheats.instance.infinitehealth == false) {
+			_health -= amount;
+			if (_health <= 0) {
+				Dead ();
+			}
+		} else {
+			_health = defaultHealth;
 		}
-	}
+		}
+
 	//increases player health
 	public void IncreaseHealth(float amount)
 	{
