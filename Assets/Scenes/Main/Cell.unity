@@ -411,30 +411,6 @@ Prefab:
       propertyPath: weapons
       value: 
       objectReference: {fileID: 1392344899}
-    - target: {fileID: 22461952, guid: 2bf5c297f66f9eb47a408fdeff7d7f18, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 22491826, guid: 2bf5c297f66f9eb47a408fdeff7d7f18, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 22438142, guid: 2bf5c297f66f9eb47a408fdeff7d7f18, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22419868, guid: 2bf5c297f66f9eb47a408fdeff7d7f18, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 22419184, guid: 2bf5c297f66f9eb47a408fdeff7d7f18, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 22417084, guid: 2bf5c297f66f9eb47a408fdeff7d7f18, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2bf5c297f66f9eb47a408fdeff7d7f18, type: 2}
   m_IsPrefabParent: 0
