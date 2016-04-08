@@ -209,11 +209,14 @@ public class PlayerProperties : MonoBehaviour {
 	{
 		//MakeDamageText (-amount);
 		if (Cheats.instance.infinitehealth == false) {
-			_health -= amount;
+            Debug.Log("Taking Damage");
+            _health -= amount;
 			if (_health <= 0) {
 				Dead ();
 			}
 		} else {
+
+            Debug.Log("Saved by cheats");
 			_health = defaultHealth;
 		}
 		}

@@ -13,6 +13,7 @@ TagManager:
   - Weapon
   - pointsText
   - CheatBox
+  - Enemy
   layers:
   - Default
   - TransparentFX

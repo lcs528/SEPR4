@@ -411,6 +411,18 @@ Prefab:
       propertyPath: weapons
       value: 
       objectReference: {fileID: 1392344899}
+    - target: {fileID: 22461952, guid: 2bf5c297f66f9eb47a408fdeff7d7f18, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 22461952, guid: 2bf5c297f66f9eb47a408fdeff7d7f18, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 254
+      objectReference: {fileID: 0}
+    - target: {fileID: 130380, guid: 2bf5c297f66f9eb47a408fdeff7d7f18, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2bf5c297f66f9eb47a408fdeff7d7f18, type: 2}
   m_IsPrefabParent: 0
@@ -476,6 +488,26 @@ Prefab:
     - target: {fileID: 2034150, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
       propertyPath: orthographic size
       value: 61.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226058, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226058, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 16940246, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
+      propertyPath: lowpassLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220608, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220608, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
@@ -813,7 +845,7 @@ Transform:
   m_LocalScale: {x: 0.24290177, y: 0.2429018, z: 0.2429018}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &1337369264
 GameObject:
   m_ObjectHideFlags: 0
@@ -2501,7 +2533,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &1737076147
 MonoBehaviour:
   m_ObjectHideFlags: 0

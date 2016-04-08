@@ -43,7 +43,6 @@ public class Cheats : MonoBehaviour {
 		if (cheatMenuOpen) {
 			if (Input.GetKeyDown (KeyCode.Return)) {
 				//entered cheat
-				Debug.Log ("entered");
 				TakeString (cheatIn.text);
 			}
 		} else {
@@ -65,9 +64,9 @@ public class Cheats : MonoBehaviour {
 				} 
 				if (ghealthcode [2]) {
 					if (infinitehealth) {
-						TakeString ("inifintehealth off");
+						TakeString ("infinitehealth off");
 					} else {
-						TakeString ("inifintehealth on");
+						TakeString ("infinitehealth on");
 					}
 					ArrayReset (ghealthcode);
 				}
@@ -157,12 +156,14 @@ public class Cheats : MonoBehaviour {
 
 
 	public void TakeString(string inString) {
+
+        Debug.Log("Cheat Entered: " + inString );
 		string[] parts = inString.Split (' ');
 		if (parts.Length > 2 || parts.Length <1) {
 			//wrong amount of paramaters
 
 		} else if (parts.Length == 2) {
-			if (parts [0] == "inifintehealth") {
+			if (parts [0] == "infinitehealth") {
 				if (parts [1] == "on") {
 					//infinitehealth is on
 					infinitehealth = true;

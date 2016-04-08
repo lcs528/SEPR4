@@ -15,13 +15,14 @@ public class CannonBallImpact : MonoBehaviour {
 
 	//hit a player, add damage.
 	void OnTriggerEnter2D(Collider2D coll){
-		if (!coll.isTrigger)
+		if (!coll.isTrigger && coll.tag != "Enemy")
 		{
 			Destroy (gameObject);
 		}
 
 		if (coll.gameObject.name == "Player")
 		{
+            Debug.Log("Hit Player");
 			PlayerProperties.inst.TakeDamage (damage);
 			Destroy (gameObject);
 		}

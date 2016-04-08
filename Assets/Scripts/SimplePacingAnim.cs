@@ -27,13 +27,11 @@ public class SimplePacingAnim : MonoBehaviour
 	void WalkRight()
 	{
 		animator.SetTrigger ("walkRight");
-		Debug.Log (this.gameObject.ToString () + " : WalkRight()");
 	}
 
 	void WalkLeft()
 	{
 		animator.SetTrigger ("walkLeft");
-		Debug.Log (this.gameObject.ToString () + " : WalkRight()");
 	}
 
 	void Wait()

@@ -12,10 +12,11 @@ public class FireProjectile : MonoBehaviour {
 
 	public float knockBackAmount = 0.4f;
 
-	public Transform target;
+	public Vector3 target;
 
 	//The rigidbody to apply knockback to.
 	public Rigidbody2D knockBackRigidBody;
+
 
 
 	//Function to modify the projectile, can imagine it like the
@@ -25,7 +26,7 @@ public class FireProjectile : MonoBehaviour {
 
 	public void Fire(float modifierValue = 1.0f)
 	{
-		/*
+        /*
 		 * Moved to MovePosition instead of this Add Force implementation
 		 * 
 		Vector3 finalTarget;
@@ -61,10 +62,19 @@ public class FireProjectile : MonoBehaviour {
 
 		knockBackRigidBody.AddForce (knockBackImpulseVector , ForceMode2D.Impulse);*/
 
+	    Vector3 finalTarget;
 
-		//The position that the player clicked
-		Vector3 finalTarget = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		//the vector to that target from the player
+	    if (mouseAim)
+	    {
+	        //The position that the player clicked
+	        finalTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+	    }
+	    else
+	    {
+	        finalTarget = target;
+	    }
+
+	    //the vector to that target from the player
 		Vector3 rot = finalTarget - transform.position;
 		//create projectile infront of the player
 		GameObject projectile = (GameObject)Instantiate (projectilePrefab, transform.position + transform.forward, Quaternion.identity);

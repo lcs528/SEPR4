@@ -42,11 +42,11 @@ public class Explode : MonoBehaviour
 		{
 			collider.gameObject.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
 			/*
-			Rigidbody2D rb = collider.GetComponent<Rigidbody2D>();
+			Rigidbody2D rigidBody = collider.GetComponent<Rigidbody2D>();
 			
-			if(rb != null)
+			if(rigidBody != null)
 			{
-				rb.AddExplosionForce(force, pos, radius);
+				rigidBody.AddExplosionForce(force, pos, radius);
 			}*/
 		}
 
