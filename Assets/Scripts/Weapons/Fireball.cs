@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Fireball : Weapon
 {
+
+    public bool curesDragwan;
+
 	// Use this for initialization
 	void Start () {
 		if (this.GetComponent<Rigidbody2D> () == null) {
@@ -21,6 +24,12 @@ public class Fireball : Weapon
 	    {
 	        c.gameObject.GetComponent<SimpleHP>().alterHealth(-weaponDamage);
 	    }
+	    if (c.gameObject.GetComponent<DragwanAI>() != null && curesDragwan)
+	    {
+            c.gameObject.GetComponent<DragwanAI>().Cure();
+            Destroy(gameObject);
+        }
+
 	    if (!(c.transform.tag == "Player" || c.transform.tag == "Weapon"))
 	    {
 	        Destroy(this.gameObject);

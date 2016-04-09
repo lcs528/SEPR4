@@ -9,6 +9,8 @@ public class DragwanAI : MonoBehaviour
 
     public GameObject sprite;
 
+    public GameObject curedVersion;
+
     public AudioSource fireSound;
 
     private PersistentTimer _fireTimer;
@@ -63,6 +65,12 @@ public class DragwanAI : MonoBehaviour
         _projectileFirer.Fire();
 
         fireSound.Play();
+    }
+
+    public void Cure()
+    {
+        Instantiate(curedVersion, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 
 }

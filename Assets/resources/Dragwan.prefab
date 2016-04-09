@@ -238,6 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 198942}
+  curedVersion: {fileID: 126810, guid: ac548d0867d8bd147b7770efccd2c0c1, type: 2}
   fireSound: {fileID: 8207788}
   rechargeTime: 4
   shakeToWarnTime: 1
@@ -300,6 +301,10 @@ Prefab:
       propertyPath: shakeAmount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: curedVersion
+      value: 
+      objectReference: {fileID: 126810, guid: ac548d0867d8bd147b7770efccd2c0c1, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 192558}
