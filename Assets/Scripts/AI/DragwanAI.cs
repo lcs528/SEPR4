@@ -11,9 +11,15 @@ public class DragwanAI : MonoBehaviour
 
     public GameObject curedVersion;
 
+    public GameObject teleportEffect;
+
     public AudioSource fireSound;
 
     private PersistentTimer _fireTimer;
+
+    private PersistentTimer _randomTeleportTimer;
+
+    public float chanceOfTeleporting = 0.1f;
 
     private Shake _spriteShaker;
 
@@ -48,12 +54,24 @@ public class DragwanAI : MonoBehaviour
                 FireProjectile();
             });
         });
+
+        _randomTeleportTimer = PersistentTimer.New(gameObject, 1.0f, () =>
+        {
+            if (Random.value < chanceOfTeleporting)
+            {
+                Teleport();
+                Instantiate(teleportEffect, transform.position, transform.rotation);
+            }
+        });
 	}
-	
-	// Update is called once per frame
-    void Update()
+
+    private void Teleport()
     {
-      
+        Debug.Log("Teleported");
+        Vector2 randomDisplacement = Random.insideUnitCircle*100.0f;
+        transform.position = new Vector3(transform.position.x + randomDisplacement.x,
+            transform.position.y + randomDisplacement.y,
+            transform.position.z);
     }
 
     private void FireProjectile()
