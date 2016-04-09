@@ -483,32 +483,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472186, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2034150, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
-      propertyPath: orthographic size
-      value: 61.3
+    - target: {fileID: 11432144, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
+      propertyPath: chanceOfBecommingDemented
+      value: 0.01
       objectReference: {fileID: 0}
-    - target: {fileID: 8226058, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
-      propertyPath: panLevelCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8226058, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
-      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 16940246, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
-      propertyPath: lowpassLevelCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8220608, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
-      propertyPath: panLevelCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8220608, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
-      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 11432144, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
+      propertyPath: dementedEffect
+      value: 
+      objectReference: {fileID: 1616324461}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
   m_IsPrefabParent: 0
@@ -2504,6 +2488,10 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 505117293}
   m_Script: {fileID: 11500000, guid: 296b0c4560c5f4225b35c812c62ff859, type: 3}
+--- !u!1 &1616324461 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 190796, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
+  m_PrefabInternal: {fileID: 505117293}
 --- !u!1 &1737076145
 GameObject:
   m_ObjectHideFlags: 0

@@ -34,6 +34,10 @@ public class CharacterMovement : MonoBehaviour
 	public Sprite flyingVerticalSprite;
 	public SpriteRenderer playerSprite;
 
+    public float chanceOfBecommingDemented = 0.01f;
+    private bool _isDemented;
+    private PersistentTimer _dementedTimer;
+    public GameObject dementedEffect;
 
 	//Last direction we sent to the animator
 	string lastDirectionSent = "";
@@ -50,10 +54,36 @@ public class CharacterMovement : MonoBehaviour
 	void Start () 
 	{
 		_inputAxes = new Vector2 ();
-		//StartWalking ();
+
+        //ASSESMENT 4 Randomly becomes demented.
+        _dementedTimer = PersistentTimer.New(gameObject, 1.0f, () =>
+        {
+            if (Random.value < chanceOfBecommingDemented)
+            {
+                BecomeDemented();
+            }
+        });
 	}
-	
-	void Awake()
+
+    void BecomeDemented()
+    {
+        dementedEffect.SetActive(true);
+        _isDemented = true;
+
+        //ASSESMENT 4 stops being demented after 5 seconds.
+        Timer.New(gameObject, 5.0f, () =>
+        {
+            CureDemented();
+        });
+    }
+
+    void CureDemented()
+    {
+        dementedEffect.SetActive(false);
+        _isDemented = false;
+    }
+
+    void Awake()
 	{
 		_rigidBody = GetComponent<Rigidbody2D> ();
 	}
@@ -155,9 +185,16 @@ public class CharacterMovement : MonoBehaviour
 			Vector2 currentPos = transform.position;
 
 			_inputAxes.x = Input.GetAxis ("Horizontal");
-			_inputAxes.y = Input.GetAxis ("Vertical"); 
+			_inputAxes.y = Input.GetAxis ("Vertical");
 
-			UpdateWalkDirection (_inputAxes);
+
+            //ASESSMENT 4 Disobeys commands randomly when demented.
+		    if (_isDemented && Random.value > 0.5f)
+		    {
+		        _inputAxes = Random.insideUnitCircle;
+		    }
+
+		    UpdateWalkDirection (_inputAxes);
 
 			Vector2 updateDirection = _inputAxes * speed * speedModifier * 0.01f;
 
