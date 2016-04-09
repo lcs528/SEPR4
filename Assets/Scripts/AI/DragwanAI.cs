@@ -9,6 +9,8 @@ public class DragwanAI : MonoBehaviour
 
     public GameObject sprite;
 
+    public AudioSource fireSound;
+
     private PersistentTimer _fireTimer;
 
     private Shake _spriteShaker;
@@ -59,6 +61,8 @@ public class DragwanAI : MonoBehaviour
         _projectileFirer.target = _target.position;
 
         _projectileFirer.Fire();
+
+        fireSound.Play();
     }
 
 }

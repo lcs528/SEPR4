@@ -21,10 +21,20 @@ public class UglyDucklingAI : MonoBehaviour
 
     public GameObject dragwan;
 
+    public GameObject transformEffect;
+
     public GameObject sprite;
 
     public Shake spriteShaker;
 
+    public GameObject player;
+
+    /// <summary>
+    /// How close the player needs to be for the Ugly Duckling to
+    /// check for a random transform, so that it is always visible
+    /// on screen if it transforms.
+    /// </summary>
+    public float range = 150.0f;
 
     /// <summary>
     /// How likley the ugly duckling is to turn into a dragwan.
@@ -46,12 +56,14 @@ public class UglyDucklingAI : MonoBehaviour
     void Start()
     {
 
+        player = GameObject.Find("Player");
+
         NewDirection();
 
         //Check once a second if we will go demented.
         _turningTimer = PersistentTimer.New(gameObject, 1.0f, () =>
         {
-            if (Random.value < chanceOfTurning && canTurn)
+            if (Random.value < chanceOfTurning && canTurn && PlayerIsCloseEnough() )
             {
                 GoDemented();
             }
@@ -60,12 +72,19 @@ public class UglyDucklingAI : MonoBehaviour
 
     }
 
+    private bool PlayerIsCloseEnough()
+    {
+        Vector3 joiningLine = player.transform.position - transform.position;
+        return joiningLine.magnitude <= range;
+    }
+
     private  void GoDemented()
     {
         spriteShaker.shaking = true;
         
         Timer.New(gameObject, 1.0f, () =>
         {
+            Instantiate(transformEffect, transform.position, transform.rotation);
             Instantiate(dragwan, transform.position, transform.rotation);
             Destroy(gameObject);
         });
@@ -110,9 +129,10 @@ public class UglyDucklingAI : MonoBehaviour
 
 
     //Debug
-    void OnDrawGizmos()
+    void OnDrawGizmosSelected()
     {
-        Gizmos.DrawLine(transform.position, target);
+        Gizmos.color = Color.blue.MultiplyAlpha(0.2f);
+        Gizmos.DrawWireSphere(transform.position, range);
     }
 
 

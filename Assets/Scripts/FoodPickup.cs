@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 
@@ -7,15 +8,20 @@ using System.Collections;
 /// 
 /// Adds food to the players inventory and then destroys itself on collision.
 /// </summary>
-public class FoodPickup : MonoBehaviour 
+/// 
+[RequireComponent (typeof (AudioSource))]
+
+public class FoodPickup : MonoBehaviour
 {
 
+    public GameObject pickupEffect;
 	public string foodName = "Apple";
 
-	void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col)
 	{
 		if (col.name == "Player")
 		{
+		    Instantiate(pickupEffect, transform.position, transform.rotation);
 			GameObject.FindGameObjectWithTag("Statics").GetComponent<UIFood>().ObtainFood(foodName,1);
 		}
 

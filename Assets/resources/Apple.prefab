@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21251028}
   - 61: {fileID: 6105138}
   - 114: {fileID: 11474832}
+  - 82: {fileID: 8202436}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -96.7, y: 72.5, z: 0}
+  m_LocalPosition: {x: -31.092937, y: 3.5123901, z: 0}
   m_LocalScale: {x: 2.3168087, y: 2.0913692, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -44,6 +45,80 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 9.74, y: 9.98}
+--- !u!82 &8202436
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172932}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11474832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55,6 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20dfb8be0b1924ddaa99e11cac134d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupEffect: {fileID: 178030, guid: 3676c0f60cc453749b5f144a0dcb20c2, type: 2}
   foodName: Apple
 --- !u!212 &21251028
 SpriteRenderer:
@@ -97,6 +173,22 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ea6bbd71276bc45b69740c47ce6f1a8d, type: 2}
+    - target: {fileID: 0}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 793203f1a20b34345b24ec0894fa4490, type: 3}
+    - target: {fileID: 0}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 178030, guid: 3676c0f60cc453749b5f144a0dcb20c2, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 172932}

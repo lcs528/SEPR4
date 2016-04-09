@@ -137,9 +137,12 @@ MonoBehaviour:
   changeDirectionTime: 10
   rigidBody: {fileID: 5097702}
   dragwan: {fileID: 192558, guid: 11906f65aa00c74449e6438eae918050, type: 2}
+  transformEffect: {fileID: 149674, guid: 6bdef81b36befec4d8f66da5209019dd, type: 2}
   sprite: {fileID: 173832}
   spriteShaker: {fileID: 11403222}
-  chanceOfTurning: 0.01
+  player: {fileID: 0}
+  range: 150
+  chanceOfTurning: 0.05
   canTurn: 1
 --- !u!212 &21295404
 SpriteRenderer:
@@ -180,12 +183,20 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: chanceOfTurning
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: canTurn
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: range
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: transformEffect
+      value: 
+      objectReference: {fileID: 149674, guid: 6bdef81b36befec4d8f66da5209019dd, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 126810}
