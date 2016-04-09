@@ -141,6 +141,56 @@ MonoBehaviour:
   sideConditionMissionName: 
   sideConditionPreviousPart: 0
   sideConditionMissionPart: 
+--- !u!1001 &225081700
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 525639605}
+    m_Modifications:
+    - target: {fileID: 473642, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473642, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473642, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473642, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473642, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473642, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.009162851
+      objectReference: {fileID: 0}
+    - target: {fileID: 473642, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.99995804
+      objectReference: {fileID: 0}
+    - target: {fileID: 473642, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 104984, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &225081701 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 104984, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+  m_PrefabInternal: {fileID: 225081700}
 --- !u!1001 &525639604
 Prefab:
   m_ObjectHideFlags: 0
@@ -180,9 +230,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11432144, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
+      propertyPath: dementedEffect
+      value: 
+      objectReference: {fileID: 225081701}
+    - target: {fileID: 11432144, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
+      propertyPath: chanceOfBecommingDemented
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &525639605 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 407846, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
+  m_PrefabInternal: {fileID: 525639604}
 --- !u!1 &669664154
 GameObject:
   m_ObjectHideFlags: 0

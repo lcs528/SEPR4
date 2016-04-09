@@ -309,6 +309,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!1001 &634128012
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1663165508}
+    m_Modifications:
+    - target: {fileID: 473642, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473642, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473642, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473642, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473642, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473642, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.009162851
+      objectReference: {fileID: 0}
+    - target: {fileID: 473642, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.99995804
+      objectReference: {fileID: 0}
+    - target: {fileID: 473642, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &634128013 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 104984, guid: ef3f07a59b091ea4b966ae45dfe7e379, type: 2}
+  m_PrefabInternal: {fileID: 634128012}
 --- !u!1 &698115972
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,6 +1138,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: d9145935017fd43c9aa51a8e8273c1f7,
         type: 3}
+    - target: {fileID: 11432144, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
+      propertyPath: dementedEffect
+      value: 
+      objectReference: {fileID: 634128013}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
   m_IsPrefabParent: 0
@@ -1099,6 +1149,10 @@ Prefab:
 SpriteRenderer:
   m_PrefabParentObject: {fileID: 21228404, guid: ab75c0326661d4da8a5f1486ef5b92fd,
     type: 2}
+  m_PrefabInternal: {fileID: 1663165506}
+--- !u!4 &1663165508 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 407846, guid: ab75c0326661d4da8a5f1486ef5b92fd, type: 2}
   m_PrefabInternal: {fileID: 1663165506}
 --- !u!1 &1700754069
 GameObject:
