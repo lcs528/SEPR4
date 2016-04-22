@@ -2,6 +2,11 @@
 using System.Collections;
 using UnityEngine.UI;
 
+
+/*
+ *Assessment 4 Addition of Cheats 
+ */
+
 public class Cheats : MonoBehaviour {
 
 	public static Cheats instance;
@@ -46,7 +51,15 @@ public class Cheats : MonoBehaviour {
 				TakeString (cheatIn.text);
 			}
 		} else {
-			//for while game is running cheats
+			
+
+//for while game is running cheats
+			//These are keycode ones, so GHGH, or KLKL, or UIUI, or OPOP
+			// Infinite Health
+			// Boost Speed
+			// Add Points
+			// Remove Points
+
 			if (Input.GetKey (KeyCode.G)) {
 				ArrayReset (gpluscode);
 				ArrayReset (greducepoints);
@@ -153,6 +166,11 @@ public class Cheats : MonoBehaviour {
 			inArr [i] = false;
 		}
 	}
+
+
+
+//Typed into pause menu text box
+	//same cheat types as in game, but need to type in full codes
 
 
 	public void TakeString(string inString) {

@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿//Updated During Assessment 4
+
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class StartMenu : MonoBehaviour 
 {
 	public Slider difficultySlider;
@@ -11,6 +13,6 @@ public class StartMenu : MonoBehaviour
 	{
 		PlayerPrefs.SetInt ("difficulty", (int)difficultySlider.value);
 		AudioListener.volume = volumeSlider.value;
-		Application.LoadLevel (1);
+		SceneManager.LoadScene ("Cell");
 	}
 }

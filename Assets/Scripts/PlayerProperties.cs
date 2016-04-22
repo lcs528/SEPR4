@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 //using DG.Tweening;
 
 /*
- * Assessment3
+ * Last Updated during Assessment3
  * Updated to support states
  * Updated to keep consistent and PROPER singleton behaviour
  * 

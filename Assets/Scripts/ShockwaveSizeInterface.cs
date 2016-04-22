@@ -1,11 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//Assessment3
-//Optimised this a lot. No need to re-assign particles each time?
-//Also, why this class exists we will never know.
-//Unity was throwing some ~5000 errors per second.
-//Would delete class, but if they take-over this project again it may be needed.
+//Last Edited during Assessment3
+
 
 public class ShockwaveSizeInterface : MonoBehaviour 
 {
