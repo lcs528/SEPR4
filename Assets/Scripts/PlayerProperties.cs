@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 //using DG.Tweening;
 
 /*
- * Last Updated during Assessment3
- * Updated to support states
- * Updated to keep consistent and PROPER singleton behaviour
+ * Last Updated during Assessment4
  * 
  * */
 
@@ -15,6 +13,8 @@ public class PlayerProperties : MonoBehaviour {
 
 
 	public static PlayerProperties inst;
+
+    public bool infiniteHealth = false;
 
 	//public static GameObject Player { get { return inst.gameObject; } }
 
@@ -207,7 +207,7 @@ public class PlayerProperties : MonoBehaviour {
 	/// <param name="amount">Amount to take.</param>
 	public void TakeDamage(float amount)
 	{
-		//MakeDamageText (-amount);
+		//Assesment 4 cheats.
 		if (Cheats.instance.infinitehealth == false) {
             Debug.Log("Taking Damage");
             _health -= amount;

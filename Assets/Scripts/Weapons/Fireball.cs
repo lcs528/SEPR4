@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//Modified for Assesment 4
+
 public class Fireball : Weapon
 {
 
@@ -24,6 +26,12 @@ public class Fireball : Weapon
 	    {
 	        c.gameObject.GetComponent<SimpleHP>().alterHealth(-weaponDamage);
 	    }
+
+        /*
+        * Assesment 4
+        *
+        * Cure Dragwan (Demented Waterfowl)
+        */
 	    if (c.gameObject.GetComponent<DragwanAI>() != null && curesDragwan)
 	    {
             c.gameObject.GetComponent<DragwanAI>().Cure();
