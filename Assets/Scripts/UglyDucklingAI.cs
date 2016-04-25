@@ -7,23 +7,10 @@ using ADBannerView = UnityEngine.iOS.ADBannerView;
 public class UglyDucklingAI : MonoBehaviour
 {
 
-    public Animator animator;
-
-    private Vector3 target;
-
-    public float changeDirectionTime = 2.5f;
-
-    private float _changeDirectionTimer;
-
-    private Vector3 start;
-
-    public Rigidbody2D rigidBody;
 
     public GameObject dragwan;
 
     public GameObject transformEffect;
-
-    public GameObject sprite;
 
     public Shake spriteShaker;
 
@@ -58,8 +45,6 @@ public class UglyDucklingAI : MonoBehaviour
 
         player = GameObject.Find("Player");
 
-        NewDirection();
-
         //Check once a second if we will go demented.
         _turningTimer = PersistentTimer.New(gameObject, 1.0f, () =>
         {
@@ -90,43 +75,6 @@ public class UglyDucklingAI : MonoBehaviour
         });
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (_changeDirectionTimer < changeDirectionTime)
-        {
-            _changeDirectionTimer += Time.deltaTime;
-        }
-        else
-        {
-            _changeDirectionTimer = 0;
-            NewDirection();
-        }
-
-        //transform.position = Utils.QuadEaseInOut(_changeDirectionTimer, start, target, changeDirectionTime);
-
-        rigidBody.velocity = (target - start)*0.1f;
-    }
-
-    private void NewDirection()
-    {
-        start = transform.position;
-        target = GenerateTarget();
-        animator.SetTrigger("walk" + Utils.MainDirectionString(target - transform.position));
-    }
-
-    private Vector3 GenerateTarget()
-    {
-        float d = 200.0f;
-
-        float xoff = RandomDistance(d);
-        float yoff = RandomDistance(d);
-
-        Vector3 target = new Vector3(transform.position.x + xoff, transform.position.y + yoff, transform.position.z);
-
-        return target;
-    }
-
 
     //Debug
     void OnDrawGizmosSelected()
@@ -135,28 +83,5 @@ public class UglyDucklingAI : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 
-
-    private float RandomDistance(float d)
-    {
-        float raw = Random.Range(-d, d);
-
-        float minimum = d*0.4f;
-
-        if (raw < 0)
-        {
-            raw = Mathf.Clamp(raw, -d, -minimum);
-        }
-        else
-        {
-            raw = Mathf.Clamp(raw, 2, minimum);
-        }
-
-        return raw;
-    }
-
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        NewDirection();
-    }
 
 }

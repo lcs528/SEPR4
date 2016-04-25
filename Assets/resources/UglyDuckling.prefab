@@ -11,6 +11,7 @@ GameObject:
   - 114: {fileID: 11474312}
   - 61: {fileID: 6158858}
   - 50: {fileID: 5097702}
+  - 114: {fileID: 11434014}
   m_Layer: 0
   m_Name: UglyDuckling
   m_TagString: Untagged
@@ -43,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.7443, y: 4.547948, z: 0}
+  m_LocalPosition: {x: -263.73358, y: 170.05324, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 479716}
@@ -122,6 +123,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shaking: 0
   shakeAmount: 5
+--- !u!114 &11434014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9000105a48d84a478cb30819620ed32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 9519620}
+  rigidBody: {fileID: 5097702}
+  changeDirectionTime: 2.5
 --- !u!114 &11474312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -133,12 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aa764c42b5ad2140be7370d1feff3af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 9519620}
-  changeDirectionTime: 10
-  rigidBody: {fileID: 5097702}
   dragwan: {fileID: 192558, guid: 11906f65aa00c74449e6438eae918050, type: 2}
   transformEffect: {fileID: 149674, guid: 6bdef81b36befec4d8f66da5209019dd, type: 2}
-  sprite: {fileID: 173832}
   spriteShaker: {fileID: 11403222}
   player: {fileID: 0}
   range: 150

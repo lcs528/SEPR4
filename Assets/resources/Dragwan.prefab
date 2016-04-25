@@ -72,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.947475, y: 7.9736724, z: 0}
+  m_LocalPosition: {x: -198.29547, y: 196.37692, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 479946}
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 198942}
-  curedVersion: {fileID: 126810, guid: ac548d0867d8bd147b7770efccd2c0c1, type: 2}
+  curedVersion: {fileID: 123278, guid: 037e27b2a3731314e918c3b55e8d848f, type: 2}
   teleportEffect: {fileID: 152576, guid: dd02c8bd2fc5caa4387534db720b5341, type: 2}
   fireSound: {fileID: 8207788}
   chanceOfTeleporting: 0.3
