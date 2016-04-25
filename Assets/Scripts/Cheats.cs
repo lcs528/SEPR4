@@ -34,26 +34,37 @@ public class Cheats : MonoBehaviour {
 		DontDestroyOnLoad (this.gameObject);
 	}
 
-	// Use this for initialization
-	void Start () {
-		
-	}
 
 	void OnLevelWasLoaded() {
-		cheatIn = GameObject.FindGameObjectWithTag ("CheatBox").GetComponent<InputField> ();
+        FindCheatIn();
 	}
-	
-	// Update is called once per frame
+
+    private void FindCheatIn(){
+        cheatIn = GameObject.FindGameObjectWithTag("CheatBox").GetComponent<InputField>();
+    }
+
+    // Update is called once per frame
 	void Update () {
 		if (cheatMenuOpen) {
 			if (Input.GetKeyDown (KeyCode.Return)) {
 				//entered cheat
-				TakeString (cheatIn.text);
+
+			    if (cheatIn == null)
+			    {
+                    FindCheatIn();
+			    }
+
+			    if (TakeString(cheatIn.text))
+			    {
+                    //Clear box if cheat was accepted.
+                    cheatIn.text = "";
+                }
+			    
 			}
 		} else {
 			
 
-//for while game is running cheats
+            //for while game is running cheats
 			//These are keycode ones, so GHGH, or KLKL, or UIUI, or OPOP
 			// Infinite Health
 			// Boost Speed
@@ -137,7 +148,6 @@ public class Cheats : MonoBehaviour {
 					greducepoints [2] = true;
 				}
 			} else if (Input.GetKey (KeyCode.P)) {
-				Debug.Log ("shdkhdklhvkdh");
 				ArrayReset (gpluscode);
 				ArrayReset (gboostcode);
 				ArrayReset (ghealthcode);
@@ -169,60 +179,66 @@ public class Cheats : MonoBehaviour {
 
 
 
-//Typed into pause menu text box
+    //Typed into pause menu text box
 	//same cheat types as in game, but need to type in full codes
-
-
-	public void TakeString(string inString) {
+    //returns true if the cheat was valid.
+	public bool TakeString(string inString) {
 
         Debug.Log("Cheat Entered: " + inString );
 		string[] parts = inString.Split (' ');
 		if (parts.Length > 2 || parts.Length <1) {
-			//wrong amount of paramaters
-
+			//Wrong amount of paramaters
+		    return false;
 		} else if (parts.Length == 2) {
 			if (parts [0] == "infinitehealth") {
 				if (parts [1] == "on") {
 					//infinitehealth is on
 					infinitehealth = true;
 					boostspeed = false;
-
+				    return true;
 				} else if (parts [1] == "off") {
 					//infinitehealth is off
 					infinitehealth = false;
+                    return true;
 
-				} else {
-					//invalid input
-				}
+                }
 			} else if (parts [0] == "boostspeed") {
 				if (parts [1] == "on") {
 					//boostspeed is on
 					boostspeed = true;
 					infinitehealth = false;
+				    return true;
 
 				} else if (parts [1] == "off") {
 					//boostspeed is off
 					boostspeed = false;
+				    return true;
 
-				} else {
-					//invalud input
 				}
 			}
+		} else if (parts.Length == 1)
+		{
+		    if (parts[0] == "pluspoints")
+		    {
+		        //add 100 points
+		        boostspeed = false;
+		        infinitehealth = false;
+		        PlayerProperties.inst.Score = PlayerProperties.inst.Score + 100;
+		        return true;
 
-		} else if (parts.Length == 1) {
-			if (parts [0] == "pluspoints") {
-				//add 100 points
-				boostspeed = false;
-				infinitehealth = false;
-				PlayerProperties.inst.Score = PlayerProperties.inst.Score + 100;
-
-			} else if (parts [0] == "reducepoints") {
-				//minus 100 points
-				infinitehealth = false;
-				boostspeed = false;
-				PlayerProperties.inst.Score = 0;
-			}
+		    }
+		    else if (parts[0] == "reducepoints")
+		    {
+		        //minus 100 points
+		        infinitehealth = false;
+		        boostspeed = false;
+		        PlayerProperties.inst.Score = 0;
+		        return true;
+		    }
 		}
+
+        //Input was not recognised.
+	    return false;
 	}
 
 }

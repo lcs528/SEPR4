@@ -5,6 +5,12 @@ using System.IO;
 using System.Xml.Schema;
 using UnityEngine.SceneManagement;
 
+
+/// <summary>
+/// DebugUI creates a screen for switching between scenes
+/// without exiting the game. It is for debuging persons and
+/// is not intended for gameplay.
+/// </summary>
 public class DebugUI : MonoBehaviour
 {
     private List<string> _scenes;
@@ -22,7 +28,7 @@ public class DebugUI : MonoBehaviour
         var allFileInfos = dirInfo.GetFiles("*.unity", SearchOption.AllDirectories);
         foreach (var fileInfo in allFileInfos)
         {
-            string name = SeneNameFromPath(@fileInfo.FullName);
+            string name = SceneNameFromPath(@fileInfo.FullName);
 
             if (Application.CanStreamedLevelBeLoaded(name))
             {
@@ -32,8 +38,8 @@ public class DebugUI : MonoBehaviour
         }
 
     }
-
-    private string SeneNameFromPath(string value)
+    
+    private string SceneNameFromPath(string value)
     {
         value = value.Substring(value.LastIndexOf('\\') + 1);
         return value.Split('.')[0];

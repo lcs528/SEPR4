@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Runtime.CompilerServices;
-using UnityStandardAssets.ImageEffects;
-using ADBannerView = UnityEngine.iOS.ADBannerView;
 
+/// <summary>
+/// UglyDucklingAI causes the gameobject to potentialy transform into a
+/// dragwan randomly at a time interval. It will also not transform unless
+/// the player is close enough to see it.
+/// </summary>
 public class UglyDucklingAI : MonoBehaviour
 {
 
@@ -67,6 +69,7 @@ public class UglyDucklingAI : MonoBehaviour
     {
         spriteShaker.shaking = true;
         
+        //Wait a second so the shaking can be seen and then transform.
         Timer.New(gameObject, 1.0f, () =>
         {
             Instantiate(transformEffect, transform.position, transform.rotation);
